@@ -22,11 +22,12 @@ label {
     margin-bottom: 5px;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     background: var(--base-color);
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     height: 500px;
     align-items: center;
     justify-content: space-evenly;
@@ -34,7 +35,7 @@ label {
     box-shadow: 0 0 10px var(--element-color);
 }
 
-.title{
+.title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,6 +103,7 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 300px;
 }
 
 .output{
@@ -120,7 +122,79 @@ label {
     user-select: none;
 }
 
+.footer {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--element-color);
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 .animation-pulse {
     animation: pulse;
     animation-duration: 1s;
+}
+
+@media screen and (max-width: 400px) {
+    .title,
+    .container,
+    .inputNumber,
+    .inputConverters,
+    .btnConvert,
+    .btnReset,
+    .footer,
+    .output {
+        max-width: 80%;
+    }
+
+    .title {
+        font: bold 19px sans-serif;
+    }
+
+    .output {
+        font: italic 14px sans-serif;
+        width: 280px;
+    }
+
+    .footer {
+        font-size: 14px;
+        bottom: -20px;
+    }
+
+    label {
+        font: italic 15px sans-serif;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .title,
+    .container,
+    .inputNumber,
+    .inputConverters,
+    .btnConvert,
+    .btnReset,
+    .footer,
+    .output {
+        max-width: 70%;
+    }
+
+    .title {
+        font: bold 18px sans-serif;
+    }
+
+    .output {
+        font: italic 13px sans-serif;
+        width: 280px;
+    }
+
+    .footer {
+        font-size: 14px;
+        bottom: -20px;
+    }
+
+    label {
+        font: italic 15px sans-serif;
+    }
 }

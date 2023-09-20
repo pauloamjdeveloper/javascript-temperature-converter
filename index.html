@@ -18,19 +18,22 @@
     
             <div class="inputValue">
                 <label id="labelTemperature">Temperatura</label>
-                <input type="number" class="inputFocus optionText inputNumber" id="inputTemperature">
+                <input type="number" class="inputFocus optionText inputNumber" id="inputTemperature" placeholder="Informe o valor">
             </div>
     
             <div class="inputConverter">
                 <label id="labelSelect">Conversão</label>
                 <select class="inputFocus optionText inputConverters" id="converters">
-                    <option></option>
-                    <option value="optionCelsiusToFahrenheit">Celsius para Fahrenheit</option>
-                    <option value="optionCelsiusToKelvin">Celsius para kelvin</option>
-                    <option value="optionFahrenheitToCelsius">Fahrenheit para Celsius</option>
-                    <option value="optionFahrenheitToKelvin">Fahrenheit para Kelvin</option>
-                    <option value="optionKelvinToFahrenheit">Kelvin para Fahrenheit</option>
-                    <option value="optionKelvinToCelsius">Kelvin para Celsius</option>
+                    <option value="" disabled selected>Selecione uma conversão</option>
+                    <optgroup label="Conversões de Temperatura">
+                        <option value="optionCelsiusToFahrenheit">Celsius para Fahrenheit</option>
+                        <option value="optionCelsiusToKelvin">Celsius para Kelvin</option>
+                        <option value="optionFahrenheitToCelsius">Fahrenheit para Celsius</option>
+                        <option value="optionFahrenheitToKelvin">Fahrenheit para Kelvin</option>
+                        <option value="optionKelvinToFahrenheit">Kelvin para Fahrenheit</option>
+                        <option value="optionKelvinToCelsius">Kelvin para Celsius</option>
+                    </optgroup>
+                    
                 </select>
             </div>
     
@@ -43,6 +46,11 @@
                 <p id="result"></p>
             </div>
         </div>
+
+        <div class="footer">
+            &copy; <span id="currentYear"></span> - Developer by <b>Paulo Alves</b>
+        </div>
+          
     </main>
 
     <script src="js/script.js"></script>
