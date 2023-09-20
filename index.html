@@ -6,8 +6,44 @@
     <title>Conversor de Temperatura</title>
     <link rel="icon" href="../../assets/icon/temperature.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> 
 </head>
 <body>
+
+    <main>
+        <div class="container animation-pulse">
+            <div class="title">
+                <span>Conversor de Temperatura</span>
+            </div>
+    
+            <div class="inputValue">
+                <label id="labelTemperature">Temperatura</label>
+                <input type="number" class="inputFocus optionText inputNumber" id="inputTemperature">
+            </div>
+    
+            <div class="inputConverter">
+                <label id="labelSelect">Conversão</label>
+                <select class="inputFocus optionText inputConverters" id="converters">
+                    <option></option>
+                    <option value="optionCelsiusToFahrenheit">Celsius para Fahrenheit</option>
+                    <option value="optionCelsiusToKelvin">Celsius para kelvin</option>
+                    <option value="optionFahrenheitToCelsius">Fahrenheit para Celsius</option>
+                    <option value="optionFahrenheitToKelvin">Fahrenheit para Kelvin</option>
+                    <option value="optionKelvinToFahrenheit">Kelvin para Fahrenheit</option>
+                    <option value="optionKelvinToCelsius">Kelvin para Celsius</option>
+                </select>
+            </div>
+    
+            <div class="buttons">
+                <button class="btnConvert" id="convert">Converter</button>
+                <button class="btnReset" id="reset">Cancelar</button>
+            </div>
+    
+            <div class="output">
+                <p id="result"></p>
+            </div>
+        </div>
+    </main>
 
     <script src="js/script.js"></script>
 </body>
