@@ -3,6 +3,8 @@ const reset = document.getElementById("reset");
 const result = document.getElementById("result");
 const inputTemperature = document.getElementById("inputTemperature");
 const converters = document.getElementById("converters");
+const spinner = document.getElementById("spinner");
+const overlay = document.getElementById("overlay");
 
 const convertCelsiusToFahrenheit = (temperature) => {
   let fahrenheit = (temperature * 9) / 5 + 32;
@@ -31,7 +33,7 @@ const convertKelvinToFahrenheit = (temperature) => {
 
 const convertKelvinToCelsius = (temperature) => {
   let celsius = temperature - 273.15;
-  return `${temperature.toFixed(2)} K (Kelvin) equivale a ${celsius.toFixed(2)} °C (Celsius)`;
+  return `${temperature.toFixed(2)} K (Kelvin) equivalem a ${celsius.toFixed(2)} °C (Celsius)`;
 };
 
 const convertTemperature = () => {
@@ -60,6 +62,19 @@ const convertTemperature = () => {
     default:
       result.textContent = "Verifique se os valores foram preenchidos ou selecione uma opção válida!";
   }
+  executeSpinner();
+  inputTemperature.value = "";
+  converters.selectedIndex = 0;
+};
+
+const executeSpinner = () => {
+  overlay.style.display = "block";
+  spinner.style.display = "inline-block";
+
+  setTimeout(() => {
+    overlay.style.display = "none";
+    spinner.style.display = "none";
+  }, 2000);
 };
 
 const reloadPage = () => {
